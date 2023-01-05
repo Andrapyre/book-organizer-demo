@@ -4,7 +4,7 @@ import com.demo.books.models.{Author, Book}
 
 object Main {
   def organize(books: Seq[Book]): Map[Author, Seq[Book]] = {
-    var finalBooks: scala.collection.mutable.Map[Author, Seq[Book]] = scala.collection.mutable.Map.empty
+    val finalBooks: scala.collection.mutable.Map[Author, Seq[Book]] = scala.collection.mutable.Map.empty
 
     books.foreach(currentBook => {
       val currentAuthorBooks = finalBooks.getOrElse(currentBook.author, Seq.empty)
